@@ -17,29 +17,17 @@ class LoginPage(MDApp):
     def build(self):
         global screen_manager
         screen_manager = ScreenManager()
-        screen_manager.add_widget(Builder.load_file("login.kv"))
         screen_manager.add_widget(Builder.load_file("preloader.kv"))
+        screen_manager.add_widget(Builder.load_file("login.kv"))
         return screen_manager
 
     
 
-class SplashScreen():
-    """This class will show the splash screen of SpacePal"""
-    pass
+    def on_start(self):
+        Clock.schedule_once(self.login, 5)
 
-class HomeScreen():
-    """This class will show the Home screen of SpacePal"""
-    pass    
-
-class WindowManager(ScreenManager):
-    """This class will handle the screen transitions"""
-    pass
-
-    # def on_start(self):
-    #     Clock.schedule_once(self.login, 5)
-
-    # def login(self, *args):
-    #     screen_manager.current = "login"
+    def login(self, *args):
+        screen_manager.current = "login"
 
 
 
