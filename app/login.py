@@ -29,6 +29,19 @@ class LoginPage(MDApp):
     def login(self, *args):
         screen_manager.current = "login"
 
+    def back_button(self, *args):
+        if screen_manager.current == "login":
+            current_scr = screen_manager.add_widget(Builder.load_file("preloader.kv"))
+        return current_scr
+
+
+# Use this if you call a function from App class:
+
+# on_press: app.doThis()
+# And use this if you call a function from Screen class:
+
+# on_press: root.doThis()
+
 
 
 if __name__ == "__main__":

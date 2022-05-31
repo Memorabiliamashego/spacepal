@@ -1,0 +1,59 @@
+<Demo>:
+    MDScreen:
+        name: "screen1"
+        MDLabel:
+            text: "screen1"
+            halign: "center"
+        MDRaisedButton:
+            text: "login"
+            pos_hint: {"center_y": .5, "center_x": .4}
+            on_release: root.current = "screen2"
+
+    Screen:
+        name: "screen2"
+        MDLabel:
+            text: "screen2"
+            halign: "center"
+        MDRaisedButton:
+            text: "cancel"
+            pos_hint: {"center_y": .54, "center_x": .4}
+            on_release: root.current = "screen1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+############################################################# FIRST SCREEN TRANSITION EX
+
+
+# <Demo1<>:
+#     MDLabel:
+#         text: 'Screen1'
+#         halign: "center"
+#     MDRaisedButton:
+#         text: "go to screen2"
+#         pos_hint: {"center_y": .6, "center_x": .5}
+#         on_release: root.manager.current = "demo2"
+
+# <Demo2>:
+#     MDLabel:
+#         text: 'Screen2'
+#         halign: "center"
+#     MDRaisedButton:
+#         text: "go to screen1"
+#         pos_hint: {"center_y": .6, "center_x": .5}
+#         on_release: root.manager.current = "demo1"
